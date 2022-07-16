@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 style="text-align:center;">DESIGN OF IIR FILTER BY IMPULSE INVARIANT TRANSFORMATION</h1>
+    <P>In this technique, the desired impulse response of the digital filter is obtained by uniformly
+        sampling the impulse response of the equivalent analog filter. The main idea behind this is to
+        preserve the frequency response characteristics of the analog filter. For the digital filter to
+        possess the frequency response characteristics of the corresponding analog filter, the
+        sampling period T should be sufficiently small (or the sampling frequency should be
+        sufficiently high) to minimize (or completely avoid) the effects of aliasing.</P>
+        <p><img src="IMG_20220715_230831.JPG"></p>
+        <p>For impulse invariant transformation,</p>
+        <p><img src="IMG_20220715_231027.JPG"></p>
+        <p>The Laplace transform of analog filter impulse response gives the transfer function of analog filter</p>
+        <p><img src="IMG_20220715_235036.JPG"></p>
+        <p>The transformation technique can be well understood
+            by first considering simple distinct poles case for the analog transfer function
+        </p>
+        <p><img src="IMG_20220715_235101.JPG"></p>
+        <p>The analog response can be obtained
+            by taking inverse laplace transform.
+        </p>
+        <p><img src="IMG_20220715_235114.JPG"></p>
+        <p>The impulse response h(n) of the equivalent digital filter is obtained by uniformly
+            sampling ha(t), i.e.,</p>
+        <p><img src="IMG_20220715_235125.JPG"></p>
+        <p>The system function of the digital system of above expression can be obtained by
+            taking z-transform, i.e.,</p>
+        <p><img src="IMG_20220716_000050.JPG"></p>
+        <p>Using the above equation for h(n), we have</p>
+        <p><img src="IMG_20220716_000101.JPG"></p>
+        <p>Comparing the above expressions, we can say that impulse invariant transformation can be achieved 
+            by mapping,
+        </p>
+        <p><img src="IMG_20220716_000116.JPG"></p>
+        <h3>Useful impulse invariant transformations</h3>
+        <p><img src="IMG_20220716_000833.JPG"></p>
+        <p><img src="IMG_20220716_000851.JPG"></p>
+    <h4>EXAMPLE</h4>
+    <p>For the analog transfer function,</p>
+    <P><img src="IMG_20220716_001237.JPG"></P>
+    <p>determine H(z) if (a) T=1 sec (b)T=0.5 sec using impulse invariant transformation.</p>
+    <h4>Solution</h4>
+    <p>Using partial fractions, the given transfer functioncan be expressed as:</p>
+    <p><img src="IMG_20220716_001251.JPG"></p>
+    <p>By impulse invariant transformation, we know that</p>
+    <p><img src="IMG_20220716_001301.JPG"></p>
+    <p>Here Ha(s) has two poles and p1 = –1 and p2 = –3.
+        Therefore, the system function of the digital filter is:</p>
+    <p><img src="IMG_20220716_001324.JPG"></p>
+    <p><img src="Screenshot_20220716_002044.JPG"></p>
+</body>
+</html>
